@@ -1,6 +1,7 @@
 import time
 import os
 import shutil
+import re
 
 SECONDS_IN_DAY = 24 * 60 * 60
 src = '.'
@@ -15,7 +16,7 @@ def get_appropriate_folder(filename):
 
 for fname in os.listdir(src):
 
-    if fname == 'archive.py':
+    if fname == 'archive.py' or re.match('^[0-9]{4}-[0-9]{2}$', fname):
         continue
     print('Processing ', fname)
     src_fname = os.path.join(src, fname)
