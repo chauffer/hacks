@@ -1,0 +1,1 @@
+alias k3s-join-cmd="echo \"curl -sfL https://get.k3s.io | K3S_URL=https://\$(curl -s icanhazip.com):6443 K3S_TOKEN=\$(cat /var/lib/rancher/k3s/server/node-token) sh -\""
